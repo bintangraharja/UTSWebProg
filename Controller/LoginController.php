@@ -6,7 +6,7 @@ $email = trim($_POST['email']);
 $password = trim($_POST['password']);
 
 $login = mysqli_query($db,"Select * From Akun Where email ='$email'");
-$cek = mysqli_num_rows($sql);
+$cek = mysqli_num_rows($login);
 
 if($cek > 0){
     $data = mysqli_fetch_assoc($login);

@@ -21,10 +21,28 @@
 				<i class="fa fa-envelope icon"></i>
 				<input type="email" name="email" id="Email" class="input-field" placeholder="Email" required>
 			</div>
+			<?php 
+	            if(isset($_GET['pesan'])){
+		        	if($_GET['pesan']=="failemail"){
+					echo "<div class='alert alert-danger' role='alert' style='margin-top:10px; text-align:center;'>
+  							Email anda salah atau tidak terdaftar!
+						 </div>";
+                	}
+				}
+					?>
 			<div class="input-container">
 				<i class="fa fa-key icon"></i>
 				<input type="password" name="password" id="Password" class="input-field" placeholder="Password" required>
 			</div>
+			<?php 
+	            if(isset($_GET['pesan'])){
+		    		if($_GET['pesan']=="failpass"){
+						echo "<div class='alert alert-danger' role='alert' style='margin-top:10px; text-align:center;'>
+  								password anda salah!
+					 		 </div>";
+                    }
+				}
+					?>
 			<!--
 			 	INSERT CAPTCHA HERE 
 									-->
