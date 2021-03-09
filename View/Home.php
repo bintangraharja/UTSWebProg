@@ -1,9 +1,10 @@
 <?php
+	session_start();
 	if(!isset($_SESSION["user-login"])){
-		include_once('Header.php');
+		include('Header.php');
 	}
 	else{
-		include_once("HeaderIn.php");
+		include("HeaderIn.php");
 		if($_SESSION["user-login"] == 'admin'){
 			header("location: ./HomeAdmin.php");
 		}
