@@ -4,6 +4,9 @@
 	}
 	else{
 		include_once("HeaderIn.php");
+		if($_SESSION["user-login"] == 'admin'){
+			header("location: ./HomeAdmin.php");
+		}
 	}
 ?>
 
