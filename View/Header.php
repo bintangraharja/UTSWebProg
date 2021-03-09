@@ -5,7 +5,7 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 	  	<div class="container-fluid bg-header">
 		    <div class="navbar-header">
-		      	<img src="./Gallery/LogoLandscape.png" width="140" height="50">
+		      	<img src="../Asset/Gallery/LogoLandscape.png" width="140" height="50">
 		    </div>
 	    	<ul class="nav navbar-nav">
 		      	<li><a href="Home.php">Home</a></li>
