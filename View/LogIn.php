@@ -5,6 +5,7 @@
 	else{
 		include_once("HeaderIn.php");
 	}
+
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +43,7 @@
 					 		 </div>";
                     }
 				}
-					?>
+			?>
 			<!--
 			 	INSERT CAPTCHA HERE 
 									-->

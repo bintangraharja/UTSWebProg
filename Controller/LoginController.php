@@ -21,3 +21,4 @@ if($cek > 0){
 }else{
     header("location:../View/LogIn.php?pesan=failemail");
 }
+?>
