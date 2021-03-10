@@ -1,9 +1,10 @@
 <?php
+	session_start();
 	if(!isset($_SESSION["user-login"])){
-		include_once('Header.php');
+		include('Header.php');
 	}
 	else{
-		include_once("HeaderIn.php");
+		include("HeaderIn.php");
 		if($_SESSION["user-login"] == 'admin'){
 			header("location: ./HomeAdmin.php");
 		}
@@ -54,7 +55,7 @@
 			<h3 style="text-align: center;">Chef's Recommendation</h3>
 			<div class="row">
 				<div class="column-home">
-			    	<img src="./Gallery/L0012.jpg" class="image" style="width: 100%">
+			    	<img src="../Asset/Gallery/L0012.jpg" class="image" style="width: 100%">
 			    	<div class="middle-text">
 			    		<div class="text-hover">Babi Panggang</div>
 			    	</div>

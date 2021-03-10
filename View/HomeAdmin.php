@@ -1,9 +1,10 @@
 <?php
+	session_start();
 	if(!isset($_SESSION["user-login"])){
-		include_once('Header.php');
+		include('Header.php');
 	}
 	else{
-		include_once("HeaderIn.php");
+		include("HeaderIn.php");
 		if($_SESSION["user-login"] == 'user'){
 			header("location: ./Home.php");
 		}
@@ -16,7 +17,7 @@
 		      	<a class="navbar-brand">XXX FuLay</a>
 		    </div>
 	    	<ul class="nav navbar-nav navbar-right">
-		      	<li><a href="Home.php"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
+		      	<li><a href="../Controller/LogoutController.php"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
 		    </ul>
 	  	</div>
 	</nav>

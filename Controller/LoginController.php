@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include ('../include/db_config.php');
+include('../include/db_config.php');
 
 $email = trim($_POST['email']);
 $password = trim($_POST['password']);
