@@ -42,7 +42,21 @@
 			</thead>
 			<tbody>
 				<?php 
-					
+					include('../Include/db_config.php');
+					$query = mysqli_query($db,"SELECT * FROM menu");
+					while($row = mysqli_fetch_array($query)){
+				?>
+					<tr>
+						<td><img src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " width="100px" height="100px"/></td>
+						<td><?php echo $row['IDMenu']; ?></td>
+						<td><?php echo $row['NamaMenu']; ?></td>
+						<td><?php echo $row['Harga']; ?></td>
+						<td><?php echo $row['Kategori']; ?></td>
+						<td><?php echo $row['Deskripsi']; ?></td>
+						<td></td>
+					</tr>
+				<?php
+					}
 				?>
 			</tbody>
 			<tfoot>
@@ -68,26 +82,31 @@
 						<h4>Add Menu</h4>
 					</div>
 					<div class="modal-body">
-						<form action="">
+						<form action="../Controller/AddMenuController.php" method="post" enctype="multipart/form-data">
 							<div class="form-group">
 								<label for="idMenu">ID Menu :</label>
-								<input type="text" class="form-control" id="idMenu" required>
+								<input type="text" name="idMenu" class="form-control" id="idMenu" required>
 							</div>
 							<div class="form-group">
 								<label for="namaMenu">Menu Name :</label>
-								<input type="text" class="form-control" id="namaMenu" required>
+								<input type="text" name="namaMenu" class="form-control" id="namaMenu" required>
 							</div>
 							<div class="form-group">
 								<label for="harga">Price :</label>
-								<input type="text" class="form-control" id="harga" required>
+								<input type="text" name="harga" class="form-control" id="harga" required>
 							</div>
 							<div class="form-group">
-								<label for="kategori">Category :</label>
-								<input type="text" class="form-control" id="kategori" required>
+							<label for="kategori">Category :</label>
+                                <select class="form-control" name="kategori" id="kategori">
+                                    <option>Appetizer</option>
+                                    <option>Dessert</option>
+                                    <option>Drinks</option>
+                                    <option>Main Dish</option>
+                                </select>
 							</div>
 							<div class="form-group">
-								<label for="idMenu">Description :</label>
-								<textarea class="form-control" id="idMenu"></textarea>
+								<label for="deskripsi">Description :</label>
+								<textarea class="form-control" name="deskripsi" id="deskripsi"></textarea>
 							</div>
 							<div class="form-group">
 								<label for="imageMenu">Upload Image</label>

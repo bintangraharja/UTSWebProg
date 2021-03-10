@@ -14,58 +14,30 @@
 			<h2>APPETIZER</h2>
 		</div>
 		<div>
+			
+			<?php
+			include('../Include/db_config.php');
+			$query = mysqli_query($db,"SELECT * FROM menu Where Kategori = 'Appetizer'");
+			while($row = mysqli_fetch_array($query)){
+			?>
 			<div class="row">
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="A0001" src="./Gallery/A0001.jpg" class="image" style="width:100%">
+			<?php
+				for($i = 0; $i < 4; $i++){
+			?>
+			<div class="column">
+					<img data-toggle="#myModal" data-target="#myModal" id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image" style="width:100%">
 					<div class="middle-text">
-			    		<div class="text-hover">Lumpia Kulit Tahu Goreng</div>
+			    		<div class="text-hover"><?php echo $row['NamaMenu']; ?></div>
 			    	</div>
 				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="A0002" src="./Gallery/A0002.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Pangsit Udang Mayonaise</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="A0003" src="./Gallery/A0003.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Siomay Babi</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="A0004" src="./Gallery/A0004.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Hakau Udang</div>
-			    	</div>
-				</div>
+			
+			<?php
+				}	
+			?>
 			</div>
-			<div class="row">
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="A0005" src="./Gallery/A0005.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Mantau Goreng</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="A0006" src="./Gallery/A0006.jpg"class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Xiong Long Bao</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="A0007" src="./Gallery/A0007.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Kuotie</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="A0008" src="./Gallery/A0008.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Ceker Ayam</div>
-			    	</div>
-				</div>
-			</div>
+			<?php
+			}
+			?>
 		</div>
 	</div>
 	
