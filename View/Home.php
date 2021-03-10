@@ -32,10 +32,10 @@
 				        <img src="../Asset/Gallery/voucher1.png" alt="Chania" width="460" height="345">
 			      	</div>
 			      	<div class="item">
-				        <img src="./Gallery/voucher2.png" alt="Flower" width="460" height="345">
+				        <img src="../Asset/Gallery/voucher2.png" alt="Flower" width="460" height="345">
 			      	</div>
 			      	<div class="item">
-				        <img src="./Gallery/voucher3.png" alt="Flower" width="460" height="345">
+				        <img src="../Asset/Gallery/voucher3.png" alt="Flower" width="460" height="345">
 			      	</div>
 				</div>
 				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -61,19 +61,19 @@
 			    	</div>
 			  	</div>
 			  	<div class="column-home">
-			    	<img src="./Gallery/N0002.jpg" class="image" style="width: 100%">
+			    	<img src="../Asset/Gallery/N0002.jpg" class="image" style="width: 100%">
 			    	<div class="middle-text">
 			    		<div class="text-hover">Bakmi Goreng Seafood</div>
 			    	</div>
 			  	</div>
 			  	<div class="column-home">
-			    	<img src="./Gallery/L0021.jpg" class="image" style="width: 100%">
+			    	<img src="../Asset/Gallery/L0021.jpg" class="image" style="width: 100%">
 			    	<div class="middle-text">
 			    		<div class="text-hover">Cumi Lada Garam</div>
 			    	</div>
 			  	</div>
 			  	<div class="column-home">
-			    	<img src="./Gallery/L0005.jpg" class="image" style="width: 100%">
+			    	<img src="../Asset/Gallery/L0005.jpg" class="image" style="width: 100%">
 			    	<div class="middle-text">
 			    		<div class="text-hover">Bebek Panggang</div>
 			    	</div>
@@ -81,25 +81,25 @@
 			</div>
 			<div class="row">
 				<div class="column-home">
-			    	<img src="./Gallery/R0009.jpg" class="image" style="width: 100%">
+			    	<img src="../Asset/Gallery/R0009.jpg" class="image" style="width: 100%">
 			    	<div class="middle-text">
 			    		<div class="text-hover">Bubur Pitan Babi</div>
 			    	</div>
 			  	</div>
 			  	<div class="column-home">
-			    	<img src="./Gallery/A0003.jpg" class="image" style="width: 100%">
+			    	<img src="../Asset/Gallery/A0003.jpg" class="image" style="width: 100%">
 			    	<div class="middle-text">
 			    		<div class="text-hover">Siomay Babi</div>
 			    	</div>
 			  	</div>
 			  	<div class="column-home">
-			    	<img src="./Gallery/V0001.jpg" class="image" style="width: 100%">
+			    	<img src="../Asset/Gallery/V0001.jpg" class="image" style="width: 100%">
 			    	<div class="middle-text">
 			    		<div class="text-hover">Cah Brokoli</div>
 			    	</div>
 			  	</div>
 			  	<div class="column-home">
-			    	<img src="./Gallery/A0004.jpg" class="image" style="width: 100%">
+			    	<img src="../Asset/Gallery/A0004.jpg" class="image" style="width: 100%">
 			    	<div class="middle-text">
 			    		<div class="text-hover">Hakau Udang</div>
 			    	</div>
