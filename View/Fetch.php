@@ -42,11 +42,3 @@
         echo $output;
     }
 ?>
-
-<script>
-    $(document).ready(function() {  
-		$('#Qty').on('input', function() {
-			$('#harga').val($('#Qty').val() * <?php echo $row['Harga'];?>)
-		});
-	});
-</script>

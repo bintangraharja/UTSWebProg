@@ -70,7 +70,6 @@
 				method: "POST",
 				data:{imgId:imgId},
 				success:function(data){
-					console.log(data);
 					$('#thisModal').modal('show');
 					$('.modal-body').html(data);
 				}
