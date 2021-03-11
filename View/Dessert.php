@@ -10,64 +10,40 @@
 <body class="bg-body">
 	<br><br><br><br>
 	<div class="container">
-		<div class="headMenu">
-			<h2>DESSERT</h2>
-		</div>
-		<div>
-			<div class="row">
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0001" src="./Gallery/D0001.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Puding Mangga</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0002" src="./Gallery/D0002.jpg"class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Puding Kelapa</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0003" src="./Gallery/D0003.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Ice Cream</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0004" src="./Gallery/D0004.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Kue Tart Telur</div>
-			    	</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0005" src="./Gallery/D0005.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Mochi Telur Asin</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0006" src="./Gallery/D0006.jpg"class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Bao Telur Asin</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0007" src="./Gallery/D0007.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Gui Ling Gao</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0008" src="./Gallery/D0008.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Gui Ling Gao</div>
-			    	</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="headMenu">
+            <h2>DESSERT</h2>
+        </div>
+        <div class="">
+            <?php
+            include('../Include/db_config.php');
+            $i = 0;
+            $query = mysqli_query($db,"SELECT * FROM menu Where Kategori = 'Dessert'");
+
+            ?>
+            <?php
+                while($row = mysqli_fetch_array($query)){
+                if($i == 3){
+                    echo "<div class='row'>";
+                }
+            ?>
+            <div class="column">
+                <img data-toggle="#myModal" data-target="#myModal" id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image" style="width:100%">
+                <div class="middle-text">
+                    <div class="text-hover">
+                        <?php echo $row['NamaMenu']; ?>
+                    </div>
+                </div>
+            </div>
+            <?php
+                if($i == 3){
+                    echo "</div>";
+                    $i = -1;
+                }
+                $i++;
+                }
+            ?>
+        </div>
+    </div>
 
 	<div class="container">
 		<div id="thisModal" class="modal fade" role="dialog">

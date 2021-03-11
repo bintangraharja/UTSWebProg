@@ -10,64 +10,40 @@
 <body class="bg-body">
 	<br><br><br><br>
 	<div class="container">
-		<div class="headMenu">
-			<h2>DRINK</h2>
-		</div>
-		<div>
-			<div class="row">
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0009" src="./Gallery/D0009.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Chinese Tea</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0010" src="./Gallery/D0010.jpg"class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Tea</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0011" src="./Gallery/D0011.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Sweet Tea</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0012" src="./Gallery/D0012.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Teh Tarik</div>
-			    	</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0013" src="./Gallery/D0013.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Kopi Tarik</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0014" src="./Gallery/D0014.jpg"class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Soda</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0015" src="./Gallery/D0015.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Ice Lemon Tea</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="D0016" src="./Gallery/D0016.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Ice Lychee Tea</div>
-			    	</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="headMenu">
+            <h2>DRINK</h2>
+        </div>
+        <div class="">
+            <?php
+            include('../Include/db_config.php');
+            $i = 0;
+            $query = mysqli_query($db,"SELECT * FROM menu Where Kategori = 'Drinks'");
+
+            ?>
+            <?php
+                while($row = mysqli_fetch_array($query)){
+                if($i == 3){
+                    echo "<div class='row'>";
+                }
+            ?>
+            <div class="column">
+                <img data-toggle="#myModal" data-target="#myModal" id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image" style="width:100%">
+                <div class="middle-text">
+                    <div class="text-hover">
+                        <?php echo $row['NamaMenu']; ?>
+                    </div>
+                </div>
+            </div>
+            <?php
+                if($i == 3){
+                    echo "</div>";
+                    $i = -1;
+                }
+                $i++;
+                }
+            ?>
+        </div>
+    </div>
 
 	<div class="container">
 		<div id="thisModal" class="modal fade" role="dialog">

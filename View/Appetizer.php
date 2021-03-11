@@ -10,36 +10,40 @@
 <body class="bg-body">
 	<br><br><br><br>
 	<div class="container">
-		<div class="headMenu">
-			<h2>APPETIZER</h2>
-		</div>
-		<div>
-			
-			<?php
-			include('../Include/db_config.php');
-			$query = mysqli_query($db,"SELECT * FROM menu Where Kategori = 'Appetizer'");
-			while($row = mysqli_fetch_array($query)){
-			?>
-			<div class="row">
-			<?php
-				for($i = 0; $i < 4; $i++){
-			?>
-			<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover"><?php echo $row['NamaMenu']; ?></div>
-			    	</div>
-				</div>
-			
-			<?php
-				}	
-			?>
-			</div>
-			<?php
-			}
-			?>
-		</div>
-	</div>
+        <div class="headMenu">
+            <h2>APPETIZER</h2>
+        </div>
+        <div class="">
+            <?php
+            include('../Include/db_config.php');
+            $i = 0;
+            $query = mysqli_query($db,"SELECT * FROM menu Where Kategori = 'Appetizer'");
+
+            ?>
+            <?php
+                while($row = mysqli_fetch_array($query)){
+                if($i == 3){
+                    echo "<div class='row'>";
+                }
+            ?>
+            <div class="column">
+                <img data-toggle="#myModal" data-target="#myModal" id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image" style="width:100%">
+                <div class="middle-text">
+                    <div class="text-hover">
+                        <?php echo $row['NamaMenu']; ?>
+                    </div>
+                </div>
+            </div>
+            <?php
+                if($i == 3){
+                    echo "</div>";
+                    $i = -1;
+                }
+                $i++;
+                }
+            ?>
+        </div>
+    </div>
 	
 	<div class="container">
 		<div id="thisModal" class="modal fade" role="dialog">

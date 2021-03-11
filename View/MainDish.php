@@ -17,225 +17,135 @@
 			<h3>Rice</h3>
 		</div>
 		<div>
-			<div class="row">
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="R0001" src="./Gallery/R0001.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Nasi Tim Ayam</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="R0002" src="./Gallery/R0002.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Nasi Tim Babi Cincang</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="R0003" src="./Gallery/R0003.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Nasi Goreng Spesial</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="R0004" src="./Gallery/R0004.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Nasi Goreng Ikan Asin</div>
-			    	</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="R0005" src="./Gallery/R0005.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Nasi Goreng Yang Chow</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="R0006" src="./Gallery/R0006.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Nasi Putih</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="R0007" src="./Gallery/R0007.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Bubur Polos</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img data-toggle="#myModal" data-target="#myModal" id="R0008" src="./Gallery/R0008.jpg"class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Bubur Ayam</div>
-			    	</div>
-				</div>
-			</div>
-		</div>
+		<div class="row">
+            <?php
+            include('../Include/db_config.php');
+            $i = 0;
+            $query = mysqli_query($db,"SELECT * FROM menu Where Kategori = 'Main Dish' AND IDMenu LIKE 'R%'");
+
+            ?>
+            <?php
+                while($row = mysqli_fetch_array($query)){
+                if($i == 3){
+                    echo "<div class='row'>";
+                }
+            ?>
+            <div class="column">
+                <img data-toggle="#myModal" data-target="#myModal" id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image" style="width:100%">
+                <div class="middle-text">
+                    <div class="text-hover">
+                        <?php echo $row['NamaMenu']; ?>
+                    </div>
+                </div>
+            </div>
+            <?php
+                if($i == 3){
+                    echo "</div>";
+                    $i = -1;
+                }
+                $i++;
+                }
+            ?>
+        </div>
 		<div class="headMenu">
 			<h3>Noodle</h3>
 		</div>
-		<div>
-			<div class="row">
-				<div class="column">
-					<img src="./Gallery/N0001.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Bakmi Goreng Ayam</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/N0002.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Bakmi Goreng Seafood</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/N0003.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Bakmi Goreng Ulang Tahun</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/N0004.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Bihun Goreng Seafood</div>
-			    	</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="column">
-					<img src="./Gallery/N0005.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Bihun Goreng Spesial</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/N0006.jpg"class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">I Fu Mie</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/N0007.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Lo Mie</div>
-			    	</div>
-				</div>
-			</div>
-		</div>
+		<div class="row">
+            <?php
+            include('../Include/db_config.php');
+            $i = 0;
+            $query = mysqli_query($db,"SELECT * FROM menu Where Kategori = 'Main Dish' AND IDMenu LIKE 'N%'");
+
+            ?>
+            <?php
+                while($row = mysqli_fetch_array($query)){
+                if($i == 3){
+                    echo "<div class='row'>";
+                }
+            ?>
+            <div class="column">
+                <img data-toggle="#myModal" data-target="#myModal" id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image" style="width:100%">
+                <div class="middle-text">
+                    <div class="text-hover">
+                        <?php echo $row['NamaMenu']; ?>
+                    </div>
+                </div>
+            </div>
+            <?php
+                if($i == 3){
+                    echo "</div>";
+                    $i = -1;
+                }
+                $i++;
+                }
+            ?>
+        </div>
 		<div class="headMenu">
 			<h3>Dish</h3>
 		</div>
-		<div>
-			<div class="row">
-				<div class="column">
-					<img src="./Gallery/L0001.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Ayam Rebus</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/L0002.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Ayam Goreng Kering</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/L0003.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Ayam Goreng Mentega</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/L0004.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Ayam Kluyuk</div>
-			    	</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="column">
-					<img src="./Gallery/L0005.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Bebek Panggang</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/L0006.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Angsio Bakut</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/L0007.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Babi Goreng Kering</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/L0008.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Babi Sayur Asin</div>
-			    	</div>
-				</div>
-			</div>
-		</div>
+		<div class="row">
+            <?php
+            include('../Include/db_config.php');
+            $i = 0;
+            $query = mysqli_query($db,"SELECT * FROM menu Where Kategori = 'Main Dish' AND IDMenu LIKE 'L%'");
+
+            ?>
+            <?php
+                while($row = mysqli_fetch_array($query)){
+                if($i == 3){
+                    echo "<div class='row'>";
+                }
+            ?>
+            <div class="column">
+                <img data-toggle="#myModal" data-target="#myModal" id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image" style="width:100%">
+                <div class="middle-text">
+                    <div class="text-hover">
+                        <?php echo $row['NamaMenu']; ?>
+                    </div>
+                </div>
+            </div>
+            <?php
+                if($i == 3){
+                    echo "</div>";
+                    $i = -1;
+                }
+                $i++;
+                }
+            ?>
+        </div>
 		<div class="headMenu">
 			<h3>Vegetables</h3>
 		</div>
-		<div>
-			<div class="row">
-				<div class="column">
-					<img src="./Gallery/V0001.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Cah Brokoli</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/V0002.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Cah Kangkung</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/V0003.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Cah Kailan</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/V0004.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Cah Tauge Ikan Asin</div>
-			    	</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="column">
-					<img src="./Gallery/V0005.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Capcai Ayam</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/V0006.jpg"class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Capcai Kuah</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/V0007.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Capcai Seafood</div>
-			    	</div>
-				</div>
-				<div class="column">
-					<img src="./Gallery/V0008.jpg" class="image" style="width:100%">
-					<div class="middle-text">
-			    		<div class="text-hover">Kailan Saus Tiram</div>
-			    	</div>
-				</div>
-			</div>
-		</div>
-	</div>
+		<div class="row">
+            <?php
+            include('../Include/db_config.php');
+            $i = 0;
+            $query = mysqli_query($db,"SELECT * FROM menu Where Kategori = 'Main Dish' AND IDMenu LIKE 'V%'");
+
+            ?>
+            <?php
+                while($row = mysqli_fetch_array($query)){
+                if($i == 3){
+                    echo "<div class='row'>";
+                }
+            ?>
+            <div class="column">
+                <img data-toggle="#myModal" data-target="#myModal" id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image" style="width:100%">
+                <div class="middle-text">
+                    <div class="text-hover">
+                        <?php echo $row['NamaMenu']; ?>
+                    </div>
+                </div>
+            </div>
+            <?php
+                if($i == 3){
+                    echo "</div>";
+                    $i = -1;
+                }
+                $i++;
+                }
+            ?>
+        </div>
 
 	<div class="container">
 		<div id="thisModal" class="modal fade" role="dialog">

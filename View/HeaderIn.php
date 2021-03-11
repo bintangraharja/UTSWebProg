@@ -24,8 +24,8 @@
 	      		<li><button type="button" data-toggle="#myModal" data-target="#myModal" id="cartModal" class="btn btnCart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</button></li>
 	    	</ul>
 	    	<ul class="nav navbar-nav navbar-right">
-	    		<li><a>#Fname #Lname</a></li>
-		      	<li><a href="Logout.php"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
+	    		<li><a><?php echo $_SESSION['firstname']." ".$_SESSION['lastname'] ?></a></li>
+		      	<li><a href="../Controller/LogoutController.php"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
 		    </ul>
 	  	</div>
 	</nav>
