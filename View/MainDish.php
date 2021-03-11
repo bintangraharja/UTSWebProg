@@ -31,7 +31,7 @@
                 }
             ?>
             <div class="column">
-                <img data-toggle="#myModal" data-target="#myModal" id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image" style="width:100%">
+				<img id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image imgMenu" style="width:100%">
                 <div class="middle-text">
                     <div class="text-hover">
                         <?php echo $row['NamaMenu']; ?>
@@ -64,7 +64,7 @@
                 }
             ?>
             <div class="column">
-                <img data-toggle="#myModal" data-target="#myModal" id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image" style="width:100%">
+				<img id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image imgMenu" style="width:100%">
                 <div class="middle-text">
                     <div class="text-hover">
                         <?php echo $row['NamaMenu']; ?>
@@ -97,7 +97,7 @@
                 }
             ?>
             <div class="column">
-                <img data-toggle="#myModal" data-target="#myModal" id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image" style="width:100%">
+				<img id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image imgMenu" style="width:100%">
                 <div class="middle-text">
                     <div class="text-hover">
                         <?php echo $row['NamaMenu']; ?>
@@ -130,7 +130,7 @@
                 }
             ?>
             <div class="column">
-                <img data-toggle="#myModal" data-target="#myModal" id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image" style="width:100%">
+				<img id="<?php echo $row['IDMenu']; ?>" src="../Controller/ImageView.php?id=<?php echo $row['IDMenu']; ?> " class="image imgMenu" style="width:100%">
                 <div class="middle-text">
                     <div class="text-hover">
                         <?php echo $row['NamaMenu']; ?>
@@ -147,7 +147,7 @@
             ?>
         </div>
 
-	<div class="container">
+		<div class="container">
 		<div id="thisModal" class="modal fade" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -155,12 +155,7 @@
 						<button type="button" class="close" data-dismiss="modal"><span class="glyphicon glyphicon-chevron-right"></span></button>
 					</div>
 					<div class="modal-body">
-						<img src="./Gallery/R0001.jpg" style="width: 100%;">
-						<h3 style="text-align: center;">Nasi Tim Ayam</h3>
-						<p class="descBorder">Description</p>
-						<p>Rp. 25.000</p>
-						<!-- button add +/- quantity -->
-						<button type="button" class="btn btnAdd"><span class="glyphicon glyphicon-plus-sign"></span> Add to Cart</button>
+					
 					</div>
 				</div>
 			</div>
@@ -170,35 +165,29 @@
 
 <script>
 	$(document).ready(function() {
+		function fetch_post_data(imgId){
+			console.log(imgId);
+			$.ajax({
+				url: "Fetch.php",
+				method: "POST",
+				data:{imgId:imgId},
+				success:function(data){
+					$('#thisModal').modal('show');
+					$('.modal-body').html(data);
+				}
+
+			})
+		}
 		$('#thisModal').modal({
 			keyboard: false,
 			show: false,
 			backdrop: 'static'
 		});
+		$('.imgMenu').click(function(){
+			var id = $(this).attr("id");
+			fetch_post_data(id);
+		})
 
-		$('#R0001').click(function() {
-			$('#thisModal').modal('show');
-		});
-		$('#R0002').click(function() {
-			$('#thisModal').modal('show');
-		});
-		$('#R0003').click(function() {
-			$('#thisModal').modal('show');
-		});
-		$('#R0004').click(function() {
-			$('#thisModal').modal('show');
-		})
-		$('#R0005').click(function() {
-			$('#thisModal').modal('show');
-		});
-		$('#R0006').click(function() {
-			$('#thisModal').modal('show');
-		});
-		$('#R0007').click(function() {
-			$('#thisModal').modal('show');
-		});
-		$('#R0008').click(function() {
-			$('#thisModal').modal('show');
-		})
+		
 	});
 </script>
