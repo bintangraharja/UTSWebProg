@@ -25,9 +25,9 @@
 			<?php 
 	            if(isset($_GET['pesan'])){
 		        	if($_GET['pesan']=="failemail"){
-					echo "<div class='alert alert-danger' role='alert' style='margin-top:10px; text-align:center;'>
+					echo "<p class='alert alert-danger' role='alert' style='margin-top:10px; text-align:center;'>
   							Email anda salah atau tidak terdaftar!
-						 </div>";
+						 </p>";
                 	}
 				}
 					?>
