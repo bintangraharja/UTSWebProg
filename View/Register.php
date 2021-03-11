@@ -1,6 +1,6 @@
 <?php
 	if(!isset($_SESSION["user-login"])){
-		include_once('Header.php');
+		include_once('./Header.php');
 	}
 	else{
 		header("location: ./home.php");
