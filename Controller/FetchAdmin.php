@@ -1,7 +1,6 @@
 <?php
     if(isset($_POST['id'])){
         include("../Include/db_config.php");
-        
         $idMenu = $_POST['id'];
         $output = '';
         $query = "SELECT * FROM menu WHERE IDMenu = '$idMenu'";
@@ -29,15 +28,6 @@
                     <button type="submit" class="btn btnAdd"><span class="glyphicon glyphicon-plus-sign"></span> Add to Cart</button>
                 </form>
             ';
-            echo "
-            <script>
-                $(document).ready(function() {  
-                    $('#Qty').on('input', function() {
-                        Total = $('#Qty').val() *".$row['Harga']."
-                        $('#harga').val('Rp. '+Total);
-                    });
-                });
-            </script>";
         }
         echo $output;
     }

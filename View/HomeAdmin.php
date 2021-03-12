@@ -152,6 +152,7 @@
 				console.log(id);
 				$.ajax({
 					url: "../Controller/FetchAdmin.php",
+					method: "POST",
 					data:{id:id},
 					success:function(data){
 						$('#editModal').modal('show');

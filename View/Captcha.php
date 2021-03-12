@@ -17,7 +17,7 @@
   imagefill($layer, 0, 0, $captcha_bg);
   $captcha_text_color = imagecolorallocate($layer, 0, 0, 0);
   imagestring($layer, 5, 55, 10, $captcha_code, $captcha_text_color);
-  header("Content-type: image/jpeg");
-  imagejpeg($layer);
+  header("Content-type: image/png");
+  imagepng($layer);
 
 ?>
