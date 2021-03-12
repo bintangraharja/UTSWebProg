@@ -14,7 +14,7 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 	  	<div class="container-fluid bg-header">
 		    <div class="navbar-header">
-		      	<a class="navbar-brand">XXX FuLay</a>
+			<img src="../Asset/Gallery/LogoLandscape.png" width="140" height="50">
 		    </div>
 	    	<ul class="nav navbar-nav navbar-right">
 		      	<li><a href="../Controller/LogoutController.php"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
@@ -160,6 +160,19 @@
 					}
 				})
 			}
+			function delete_menu(id){
+				console.log(id);
+				$.ajax({
+					url: "../Controller/DeleteMenuController.php",
+					method: "POST",
+					data:{id:id},
+					success: function() {
+            		location.reload();
+            		alert('success');
+       			 }
+				})
+
+			}
 		$('#addModal').modal({
 			keyboard: false,
 			show: false,
@@ -176,6 +189,10 @@
 		$('.editMenu').click(function(){
 			var id = $(this).attr("id");
 			edit_data(id);
+		});
+		$('.deleteMenu').click(function(){
+			var id = $(this).attr("id");
+			delete_menu(id);
 		});
 	});
 	</script>

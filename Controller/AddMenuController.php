@@ -17,7 +17,7 @@ $query = "INSERT INTO menu(Gambar,IDMenu,NamaMenu,Harga,Kategori,Deskripsi,extGa
 if(mysqli_query($db,$query)){
     header('location: ../View/HomeAdmin.php?pesan=berhasil');
 }else{
-    echo "Error: " . $query . "<br>" . mysqli_error($db);
+    header('location: ../View/HomeAdmin.php?pesan=gagal');
 }
 
 

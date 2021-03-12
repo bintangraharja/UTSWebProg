@@ -9,24 +9,39 @@
         while($row = mysqli_fetch_array($result)){
             
             $output .= '
-                <img src="../Controller/ImageView.php?id='.$row['IDMenu'].'" style="width:100%">
-                <h3 style="text-align: center;">'.$row['NamaMenu'].'</h3>
-                <p class="descBorder">'.$row['Deskripsi'].'</p>
-                
-                <form class="col-12" action="../Controller/" method="POST">
-                    <input type="text" name="menuID" class="hide" value="'.$row['IDMenu'].'">
-                    <div class="form-row">
-                        <div class="form-group col-md-8">
-                            <label>Harga: </label>
-                            <input disabled id="harga" type="text" value="Rp. '.$row["Harga"].'">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label>Quantity: </label>
-                            <input id="Qty" type="number" name="qty" min="1" max="100" value="1" placeholder="Qty">
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btnAdd"><span class="glyphicon glyphicon-plus-sign"></span> Add to Cart</button>
-                </form>
+               <h2 style="text-align: center;">Edit Menu </h2>
+               <form action="../Controller/EditMenuController.php?id='.$row['IDMenu'].'" method="POST" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="idMenu">ID Menu :</label>
+				<input type="text" name="idMenu"value="'.$row['IDMenu'].'" class="form-control" id="idMenu" disabled>
+			</div>
+			<div class="form-group">
+				<label for="namaMenu">Menu Name :</label>
+				<input type="text" name="namaMenu" value="'.$row['NamaMenu'].'"class="form-control" id="namaMenu" required>
+			</div>
+			<div class="form-group">
+				<label for="harga">Price :</label>
+				<input type="text" name="harga" value="'.$row['Harga'].'"class="form-control" id="harga" required>
+			</div>
+			<div class="form-group">
+				<label for="kategori">Category :</label>
+				<select class="form-control" name="kategori" id="kategori" disabled>
+					<option value="'.$row['Kategori'].'">'.$row['Kategori'].'</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="deskripsi">Description :</label>
+				<textarea  name="deskripsi" class="form-control" id="idMenu" required>'.$row['Deskripsi'].'</textarea>
+			</div>
+			<div class="form-group">
+				<label for="imageMenu">Upload Image</label>
+				<input type="file" name="imageMenu" id="imageMenu">
+			</div>
+			<div>
+				<button type="submit" name="submit" class="btn btnInsert">Submit</button>
+				<button type="cancel" data-dismiss="modal" class="btn btnClose">Cancel</button>
+			</div>
+		</form>
             ';
         }
         echo $output;
