@@ -1,4 +1,5 @@
 <?php
+session_start();
 	if(!isset($_SESSION["user-login"])){
 		include_once('Header.php');
 	}

@@ -82,7 +82,7 @@
 				</div>
 				<div class="modal-footer">
 					<p>Total    : Rp. <?php echo $total;?></p>
-					<p>Tax      : $p. <?php echo $total*0.1 ?> </p>
+					<p>Tax      : Rp. <?php echo $total*0.1 ?> </p>
 					<p>Discount : </p>
 					<p>Subtotal : </p>
 				</div>
