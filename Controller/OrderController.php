@@ -7,11 +7,11 @@
         $IDMenu = $_POST['menuID'];
         $NamaMenu = $_POST['namaMenu'];
         $Qty = $_POST['qty'];
-        $Total = $_POST['total'];
+        $harga = $_POST['total'];
         $url = $_GET['url'];
 
-        $query = "INSERT INTO pesanan(IDUser,IDMenu,NamaMenu,Qty,TotalHarga) 
-        VALUES ('$IDUser', '$IDMenu','$NamaMenu','$Qty','$Total')";
+        $query = "INSERT INTO pesanan(IDUser,IDMenu,NamaMenu,Qty,Harga) 
+        VALUES ('$IDUser', '$IDMenu','$NamaMenu','$Qty','$harga')";
         $stmt = $db->prepare($query);
         $stmt->execute();
         header("Location:../View/$url.php");

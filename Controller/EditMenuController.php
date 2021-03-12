@@ -5,6 +5,10 @@ if(isset($_POST['submit'])){
     $nama = $_POST['namaMenu'];
     $harga = $_POST['harga'];
     $deskripsi = $_POST['deskripsi'];
+    $sql = "UPDATE pesanan SET NamaMenu='$nama',Harga=$harga WHERE IDMenu='$id'";
+    if(!mysqli_query($db,$sql)){
+        header('location: ../View/HomeAdmin.php?pesan=gglpesanan');
+    }
     if(is_uploaded_file($_FILES['imageMenu']['tmp_name'])){
         $file_name = $_FILES['imageMenu']['name'];
         $file_size = $_FILES['imageMenu']['size'];

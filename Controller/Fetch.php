@@ -37,7 +37,6 @@
                     $('#Qty').on('input', function() {
                         Total = $('#Qty').val() * ".$row['Harga']."
                         $('#harga').val('Rp. '+Total);
-                        $('#total').val(Total);
                     });
                 });
             </script>";
