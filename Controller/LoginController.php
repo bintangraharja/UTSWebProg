@@ -14,6 +14,7 @@ if($cek > 0){
         $_SESSION['user-login'] = $data['Ket'];
         $_SESSION['firstname'] = $data['FirstName'];
         $_SESSION['lastname'] = $data['LastName'];
+        $_SESSION['iduser'] = $data["ID"];
         header("location:../View/Home.php");
     }else{
         header("location:../View/LogIn.php?pesan=failpass");

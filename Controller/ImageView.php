@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('../Include/db_config.php');
 if(isset($_GET['id']))
 {
