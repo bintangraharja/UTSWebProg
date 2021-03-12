@@ -44,9 +44,12 @@
                     }
 				}
 			?>
-			<!--
-			 	INSERT CAPTCHA HERE 
-									-->
+			<div class="input-container">
+				<label for="captcha">Please Enter the Captcha Text</label>
+				<img src="Captcha.php" alt="CAPTCHA" class=""><i class="fas fa-redo refresh-captcha"></i>
+				<br>
+				<input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
+			</div>
 			<button type="submit" class="btn btn-block btnReglog">LOG IN</button><br>
 			<div style="text-align: center">
 				<a href="Register.php">Don't have an account? <button type="button" class="btn btnAcc">REGISTER HERE</button></a>
