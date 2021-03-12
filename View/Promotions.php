@@ -9,7 +9,7 @@
 <body class="bg-body">
 	<br><br><br>
 	<div class = "row">
-	<div class="container">
+	<div class="container" style="border-style: solid;">
 			<img src="../Asset/Gallery/voucher1.png" style="width:50%">
 			<div class ="col-sm-6" style="text-align:justify; float:right;">
 				<h1>Potongan 20% untuk setiap pembelian Bebek Panggang</h1>
@@ -22,8 +22,7 @@
 				<br>	- Voucher tidak dapat digabung dengan kode voucher yang lainnya</p>
 			</div>
 	</div>
-		<br><br><br>
-		<div class="container">
+		<div class="container" style="border-style: solid;">
 			<img src="../Asset/Gallery/voucher2.png" style="width:50%; float:right;">
 			<div class ="col-sm-6" style="text-align:justify;">
 				<h1>Beli Babi Panggang Gratis Hakau</h1>
@@ -36,8 +35,7 @@
 				<br>	- Voucher tidak dapat digabung dengan kode voucher yang lainnya</p>
 			</div>
 		</div>
-	<br><br><br>
-	<div class="container">
+	<div class="container" style="border-style: solid;">
 			<img src="../Asset/Gallery/voucher3.png" style="width:50%">
 			<div class ="col-sm-6" style="text-align:justify; float:right;">
 				<h1>Potongan 30% untuk Semua Jenis Minuman</h1>

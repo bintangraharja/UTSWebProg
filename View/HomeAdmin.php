@@ -53,6 +53,7 @@
 						<td><?php echo $row['Harga']; ?></td>
 						<td><?php echo $row['Kategori']; ?></td>
 						<td><?php echo $row['Deskripsi']; ?></td>
+						<td><?php echo "<a class='btn btn-sm btn-primary' role='button' href='delete.php?student_id=" , $row['student_id'] , "'><span class='glyphicon glyphicon-trash'></span> Delete</a><a style='margin-left: 5%;'class='btn btn-primary btn-sm' role='button' href='edit_student.php?student_id=" , $row['student_id'] , "'><span class='glyphicon glyphicon-wrench'></span> Edit</a>"; ?></td>
 						<td></td>
 					</tr>
 				<?php
