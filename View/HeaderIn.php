@@ -60,14 +60,15 @@
 								$i = 1;
 								$total = 0;
 								while($row = $result->fetch_assoc()){
+									$totalHarga = $row['Qty']*$row['Harga'];
 									echo "<tr>";
 										echo "<td>$i</td>";
 										echo "<td><img src='../Controller/ImageView.php?id=".$row['IDMenu']."' width='100px' height='100px'/></td>";
 										echo "<td>" . $row['NamaMenu'] . "</td>";
 										echo "<td>" . $row['Qty'] . "</td>";
-										echo "<td>" . $row['TotalHarga'] . "</td>";
+										echo "<td>" . $totalHarga . "</td>";
 									echo "</tr>";
-									$total += $row['TotalHarga'];
+									$total += $totalHarga;
 								}
 								mysqli_free_result($result);
 							?>
