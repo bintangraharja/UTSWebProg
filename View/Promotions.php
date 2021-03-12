@@ -44,7 +44,7 @@
 				<p>Dengan memasukkan kode voucher MK003, dapatkan potongan sebesar 30% untuk semua jenis minuman</p>
 				<p>Syarat & Ketentuan : 
 				<br>	- Berlaku sampai tanggal 15 April 2021
-				<br>	- Minimal pemesanan Rp 250.00 melalui pemesanan secara online
+				<br>	- Minimal pemesanan Rp 250.000 melalui pemesanan secara online
 				<br>	- Hanya bisa ditukarkan sebanyak satu kali untuk satu minuman harga tertinggi
 				<br>	- Berlaku untuk semua jenis pembayaran
 				<br>	- Voucher tidak dapat digabung dengan kode voucher yang lainnya</p>

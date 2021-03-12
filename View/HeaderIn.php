@@ -24,7 +24,7 @@
 	      		<li><button type="button" data-toggle="#myModal" data-target="#myModal" id="cartModal" class="btn btnCart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</button></li>
 	    	</ul>
 	    	<ul class="nav navbar-nav navbar-right">
-	    		<li><a><?php echo $_SESSION['firstname']." ".$_SESSION['lastname'] ?></a></li>
+	    		<li><a>Welcome, <?php echo $_SESSION['firstname']." ".$_SESSION['lastname'] ?></a></li>
 		      	<li><a href="../Controller/LogoutController.php"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
 		    </ul>
 	  	</div>
@@ -60,7 +60,7 @@
 				</div>
 				<div class="modal-footer">
 					<p>Total    : </p>
-					<p>Tax      : </p>
+					<p>Tax      : 10% </p>
 					<p>Discount : </p>
 					<p>Subtotal : </p>
 				</div>
