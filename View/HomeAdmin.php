@@ -53,8 +53,17 @@
 						<td><?php echo $row['Harga']; ?></td>
 						<td><?php echo $row['Kategori']; ?></td>
 						<td><?php echo $row['Deskripsi']; ?></td>
-						<td><?php echo "<a class='btn btn-sm btn-primary' role='button' href='delete.php?student_id=" , $row['student_id'] , "'><span class='glyphicon glyphicon-trash'></span> Delete</a><a style='margin-left: 5%;'class='btn btn-primary btn-sm' role='button' href='edit_student.php?student_id=" , $row['student_id'] , "'><span class='glyphicon glyphicon-wrench'></span> Edit</a>"; ?></td>
-						<td></td>
+						<td><a class='editMenu' id='<?php echo $row['IDMenu']?>'>
+								<span class="glyphicon glyphicon-wrench"></span>
+								Edit
+							</a>
+							<a class='deleteMenu' id='<?php echo $row['IDMenu']?>'>
+								<span class="glyphicon glyphicon-trash"></span>
+								Delete	
+							</a>		
+						</td>
+								
+							
 					</tr>
 				<?php
 					}
@@ -123,17 +132,50 @@
 			</div>
 		</div>
 	</div>
+	<div class="container">
+		<div id="editModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span class="glyphicon glyphicon-chevron-right"></span></button>
+					</div>
+					<div class="modal-body isi-modal">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script>
 		$(document).ready(function() {
+			function edit_data(id){
+				console.log(id);
+				$.ajax({
+					url: "../Controller/FetchAdmin.php",
+					data:{id:id},
+					success:function(data){
+						$('#editModal').modal('show');
+						$('.isi-modal').html(data);
+					}
+				})
+			}
 		$('#addModal').modal({
 			keyboard: false,
 			show: false,
 			backdrop: 'static'
 		});
-
+		$('#editModal').modal({
+			keyboard: false,
+			show: false,
+			backdrop: 'static'
+		});
 		$('#addMenu').click(function() {
 			$('#addModal').modal('show');
-		})
+		});
+		$('.editMenu').click(function(){
+			var id = $(this).attr("id");
+			edit_data(id);
+		});
 	});
 	</script>
 </body>

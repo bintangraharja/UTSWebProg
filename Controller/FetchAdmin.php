@@ -1,8 +1,8 @@
 <?php
-    if(isset($_POST['imgId'])){
+    if(isset($_POST['id'])){
         include("../Include/db_config.php");
         
-        $idMenu = $_POST['imgId'];
+        $idMenu = $_POST['id'];
         $output = '';
         $query = "SELECT * FROM menu WHERE IDMenu = '$idMenu'";
         $result = mysqli_query($db,$query);

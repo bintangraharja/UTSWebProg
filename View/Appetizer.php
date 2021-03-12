@@ -73,7 +73,6 @@
 					$('#thisModal').modal('show');
 					$('.modal-body').html(data);
 				}
-
 			})
 		}
 		$('#thisModal').modal({
@@ -85,7 +84,5 @@
 			var id = $(this).attr("id");
 			fetch_post_data(id);
 		})
-
-		
 	});
 </script>
