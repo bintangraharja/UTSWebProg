@@ -20,7 +20,7 @@
 	<div class="container">
 		<div>
 			<br><br><br>
-			<h3 style="text-align: center;">Find Our Best Deals</h3>
+			<h2 class="h2-home">Find Our Best Deals</h2>
 		  	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			    <ol class="carousel-indicators">
 			      	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -52,7 +52,7 @@
 		<!-- Chef's Recommendation -->
 		<div>
 			<br><br><br>
-			<h3 style="text-align: center;">Chef's Recommendation</h3>
+			<h2 class="h2-home">Chef's Recommendation</h2>
 			<div class="row">
 				<div class="column-home">
 			    	<img src="../Asset/Gallery/L0012.jpg" class="image" style="width: 100%">
@@ -107,7 +107,7 @@
 			</div>
 			<div class="">
 				<div class="mid">
-					<a href="MainDish.php"><button type="button" class="btn btn-lg btnReglog">SEE MENU <span class="glyphicon glyphicon-arrow-right"></span></button></a>
+					<a href="MainDish.php"><button type="button" class="btn btn-lg btnReglog h2-home">SEE MENU <span class="glyphicon glyphicon-arrow-right"></span></button></a>
 				</div>
 			</div>
 		</div>

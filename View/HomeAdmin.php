@@ -55,11 +55,9 @@
 						<td><?php echo $row['Deskripsi']; ?></td>
 						<td><a class='editMenu' id='<?php echo $row['IDMenu']?>'>
 								<span class="glyphicon glyphicon-wrench"></span>
-								Edit
 							</a>
 							<a class='deleteMenu' id='<?php echo $row['IDMenu']?>'>
 								<span class="glyphicon glyphicon-trash"></span>
-								Delete	
 							</a>		
 						</td>
 								
@@ -89,7 +87,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
-						<h4>Add Menu</h4>
+						<h3 class="h2-home">Add Menu</h3>
 					</div>
 					<div class="modal-body">
 						<form action="../Controller/AddMenuController.php" method="post" enctype="multipart/form-data">

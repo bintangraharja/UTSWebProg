@@ -12,10 +12,10 @@
 	<br><br><br><br>
 	<div class="container">
 		<div class="headMenu">
-			<h2>MAIN DISH</h2>
+			<h2 class="h2-home">MAIN DISH</h2>
 		</div>
 		<div class="headMenu">
-			<h3>Rice</h3>
+			<h2 class="h2-home">Rice</h2>
 		</div>
 		<div>
 		<div class="row">
@@ -49,7 +49,7 @@
             ?>
         </div>
 		<div class="headMenu">
-			<h3>Noodle</h3>
+			<h2 class="h2-home">Noodle</h2>
 		</div>
 		<div class="row">
             <?php
@@ -82,7 +82,7 @@
             ?>
         </div>
 		<div class="headMenu">
-			<h3>Dish</h3>
+			<h2 class="h2-home">Dish</h2>
 		</div>
 		<div class="row">
             <?php
@@ -115,7 +115,7 @@
             ?>
         </div>
 		<div class="headMenu">
-			<h3>Vegetables</h3>
+			<h2 class="h2-home">Vegetables</h2>
 		</div>
 		<div class="row">
             <?php
@@ -147,6 +147,7 @@
                 }
             ?>
         </div>
+        <br>
 
 		<div class="container">
 		<div id="thisModal" class="modal fade" role="dialog">

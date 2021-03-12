@@ -38,7 +38,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"><span class="glyphicon glyphicon-chevron-right"></span></button>
-					<h4>My Cart</h4>
+					<h3 class="h2-home">My Cart</h3>
 				</div>
 				<div class="modal-body cart-body">
 					<table id="tables" class="table table-striped table-border dataTable" style="width: 100%">

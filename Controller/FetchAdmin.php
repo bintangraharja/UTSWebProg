@@ -9,7 +9,7 @@
         while($row = mysqli_fetch_array($result)){
             
             $output .= '
-               <h2 style="text-align: center;">Edit Menu </h2>
+               <h2 class="h2-home">Edit Menu </h2>
                <form action="../Controller/EditMenuController.php?id='.$row['IDMenu'].'" method="POST" enctype="multipart/form-data">
 			<div class="form-group">
 				<label for="idMenu">ID Menu :</label>

@@ -34,6 +34,10 @@
 }
 
 /* style home */
+.h2-home {
+	text-align: center;
+	font-family: 'Kaushan Script', cursive;
+}
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     width: 70%;
     margin: auto;
@@ -154,4 +158,34 @@ p.descBorder {
 	color: white;
 	background-color: #CC8E34;
 	margin-left: 75%;
+}
+
+/* style contactus */
+.ctcUs{
+	margin-top:50px; 
+	background-image: url(../Asset/Gallery/z_bg.jpg);
+	background-position: center; 
+	background-repeat: no-repeat;
+  	background-size: cover;
+  	position: relative; 
+	height:70%
+}
+.img{
+	width:30%; 
+	margin:50px;
+}
+.h1-ctc{
+	color: white;
+	margin-right: 50px;
+	font-size: 62px;
+}
+.h2-ctc{
+	color: white;
+	margin-right: 50px;
+	font-size: 36px;
+}
+
+/* style homeadmin */
+th {
+	text-align: center;
 }

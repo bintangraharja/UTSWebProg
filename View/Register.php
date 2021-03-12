@@ -15,7 +15,7 @@
 <body class="bg-body">
 	<br><br><br><br>
 	<div class="container bg-form">
-		<h2 style="text-align: center;">REGISTER</h2>
+		<h2 class="h2-home">REGISTER</h2>
 		<form action="../Controller/RegisterController.php" method="POST">
 			<div class="form-group">
 				<div class="form-inline">

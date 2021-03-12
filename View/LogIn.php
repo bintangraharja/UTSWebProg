@@ -16,7 +16,7 @@
 <body class="bg-body">
 	<br><br><br><br>
 	<div class="container bg-form">
-		<h2 style="text-align: center;">LOG IN</h2>
+		<h2 class="h2-home">LOG IN</h2>
 		<form action="../Controller/LoginController.php" method="POST">
 			<div class="input-container">
 				<i class="fa fa-envelope icon"></i>

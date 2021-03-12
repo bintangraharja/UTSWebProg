@@ -12,7 +12,7 @@
 	<br><br><br><br>
 	<div class="container">
 		<div class="headMenu">
-			<h2>DESSERT</h2>
+			<h2 class="h2-home">DESSERT</h2>
 		</div>
 		<div class="">
 			<?php
@@ -45,6 +45,7 @@
 			?>
 		</div>
 	</div>
+	<br>
 	
 	<div class="container">
 		<div id="thisModal" class="modal fade" role="dialog">
