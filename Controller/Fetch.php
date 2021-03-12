@@ -1,7 +1,6 @@
 <?php
     if(isset($_POST['imgId'])){
         include("../Include/db_config.php");
-        
         $idMenu = $_POST['imgId'];
         $output = '';
         $query = "SELECT * FROM menu WHERE IDMenu = '$idMenu'";

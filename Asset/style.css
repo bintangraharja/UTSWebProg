@@ -122,7 +122,6 @@
 	text-align: center;
 	text-shadow: 2px 2px 5px #C4BCB2;
 	color: #B42722;
-	/* tulisan desc pake font-family: Verdana, sans-serif; */
 }
 .column {
 	position: relative;
@@ -146,8 +145,10 @@
 p.descBorder {
 	border-style: solid;
 	width: 75%;
-	text-align: justify;
+	padding: 20px;
+	text-align: center;
 	margin-left: 12%;
+	font-family: Verdana, sans-serif; 
 }
 .btnAdd {
 	color: white;
