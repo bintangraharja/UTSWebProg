@@ -5,6 +5,7 @@
         $output = '';
         $query = "SELECT * FROM menu WHERE IDMenu = '$idMenu'";
         $result = mysqli_query($db,$query);
+        $url = $_GET['url'];
         
         while($row = mysqli_fetch_array($result)){
             
@@ -13,27 +14,30 @@
                 <h3 style="text-align: center;">'.$row['NamaMenu'].'</h3>
                 <p class="descBorder">'.$row['Deskripsi'].'</p>
                 
-                <form class="col-12" action="../Controller/" method="POST">
+                <form class="col-12" action="../Controller/OrderController.php?url='.$url.'" method="POST">
                     <input type="text" name="menuID" class="hide" value="'.$row['IDMenu'].'">
+                    <input type="text" name="namaMenu" class="hide" value="'.$row['NamaMenu'].'">
                     <div class="form-row">
                         <div class="form-group col-md-8">
                             <label>Harga: </label>
-                            <input disabled id="harga" type="text" value="Rp. '.$row["Harga"].'">
+                            <input name="total" class="hide" id="total" type="text" value="'.$row['Harga'].'">
+                            <input disabled name="harga" id="harga" type="text" value="Rp. '.$row['Harga'].'">
                         </div>
                         <div class="form-group col-md-4">
                             <label>Quantity: </label>
-                            <input id="Qty" type="number" name="qty" min="1" max="100" value="1" placeholder="Qty">
+                            <input id="Qty" class="Quantity" type="number" name="qty" min="1" max="100" value="1">
                         </div>
                     </div>
-                    <button type="submit" class="btn btnAdd"><span class="glyphicon glyphicon-plus-sign"></span> Add to Cart</button>
+                    <button type="submit" name="submit" class="btn btnAdd"><span class="glyphicon glyphicon-plus-sign"></span> Add to Cart</button>
                 </form>
             ';
             echo "
             <script>
-                $(document).ready(function() {  
+                $(document).ready(function() {
                     $('#Qty').on('input', function() {
-                        Total = $('#Qty').val() *".$row['Harga']."
+                        Total = $('#Qty').val() * ".$row['Harga']."
                         $('#harga').val('Rp. '+Total);
+                        $('#total').val(Total);
                     });
                 });
             </script>";

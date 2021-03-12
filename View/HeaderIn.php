@@ -1,4 +1,5 @@
 <?php 
+	session_start();
 	include("../Include/Style.php");
 ?>
 <header>
@@ -21,7 +22,7 @@
 	      		</li>
 	      		<li><a href="./Promotions.php">Promotions</a></li>
 	      		<li><a href="./ContactUs.php">Contact Us</a></li>
-	      		<li><button type="button" data-toggle="#myModal" data-target="#myModal" id="cartModal" class="btn btnCart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</button></li>
+	      		<li><button type="button" id="cartModal" class="btn btnCart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</button></li>
 	    	</ul>
 	    	<ul class="nav navbar-nav navbar-right">
 	    		<li><a>Welcome, <?php echo $_SESSION['firstname']." ".$_SESSION['lastname'] ?></a></li>
@@ -39,7 +40,7 @@
 					<button type="button" class="close" data-dismiss="modal"><span class="glyphicon glyphicon-chevron-right"></span></button>
 					<h4>My Cart</h4>
 				</div>
-				<div class="modal-body">
+				<div class="modal-body cart-body">
 					<table id="tables" class="table table-striped table-border dataTable" style="width: 100%">
 						<thead class="cartHead">
 							<tr>
@@ -50,6 +51,27 @@
 								<th> Price </th>
 							</tr>
 						</thead>
+						<tbody>
+							<?php
+								include('../Include/db_config.php');
+								$idUser = $_SESSION['iduser'];
+								$query = "SELECT * FROM pesanan WHERE IDUser = $idUser";
+								$result = $db->query($query);
+								$i = 1;
+								$total = 0;
+								while($row = $result->fetch_assoc()){
+									echo "<tr>";
+										echo "<td>$i</td>";
+										echo "<td><img src='../Controller/ImageView.php?id=".$row['IDMenu']."' width='100px' height='100px'/></td>";
+										echo "<td>" . $row['NamaMenu'] . "</td>";
+										echo "<td>" . $row['Qty'] . "</td>";
+										echo "<td>" . $row['TotalHarga'] . "</td>";
+									echo "</tr>";
+									$total += $row['TotalHarga'];
+								}
+								mysqli_free_result($result);
+							?>
+						</tbody>
 					</table>
 				</div>
 				<div class="modal-body">
@@ -59,8 +81,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<p>Total    : </p>
-					<p>Tax      : 10% </p>
+					<p>Total    : Rp. <?php echo $total;?></p>
+					<p>Tax      : $p. <?php echo $total*0.1 ?> </p>
 					<p>Discount : </p>
 					<p>Subtotal : </p>
 				</div>

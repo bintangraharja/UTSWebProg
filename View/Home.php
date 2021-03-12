@@ -29,13 +29,13 @@
 			    </ol>
 			    <div class="carousel-inner" role="listbox">
 			      	<div class="item active">
-				        <img src="../Asset/Gallery/voucher1.png" alt="Chania" width="460" height="345">
+				        <a href="Promotions.php"><img src="../Asset/Gallery/voucher1.png" alt="Chania" width="460" height="345"></a>
 			      	</div>
 			      	<div class="item">
-				        <img src="../Asset/Gallery/voucher2.png" alt="Flower" width="460" height="345">
+					  <a href="Promotions.php"><img src="../Asset/Gallery/voucher2.png" alt="Flower" width="460" height="345"></a>
 			      	</div>
 			      	<div class="item">
-				        <img src="../Asset/Gallery/voucher3.png" alt="Flower" width="460" height="345">
+					  <a href="Promotions.php"><img src="../Asset/Gallery/voucher3.png" alt="Flower" width="460" height="345"></a>
 			      	</div>
 				</div>
 				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

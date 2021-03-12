@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	if(!isset($_SESSION["user-login"])){
 		include_once('Header.php');
 	}
@@ -52,7 +53,7 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal"><span class="glyphicon glyphicon-chevron-right"></span></button>
 					</div>
-					<div class="modal-body">
+					<div class="modal-body order-body">
 					
 					</div>
 				</div>
@@ -66,12 +67,12 @@
 		function fetch_post_data(imgId){
 			console.log(imgId);
 			$.ajax({
-				url: "../Controller/Fetch.php",
+				url: "../Controller/Fetch.php?url=Appetizer",
 				method: "POST",
 				data:{imgId:imgId},
 				success:function(data){
 					$('#thisModal').modal('show');
-					$('.modal-body').html(data);
+					$('.order-body').html(data);
 				}
 			})
 		}
@@ -84,5 +85,6 @@
 			var id = $(this).attr("id");
 			fetch_post_data(id);
 		})
+		
 	});
 </script>
