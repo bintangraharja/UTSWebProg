@@ -146,8 +146,9 @@
 p.descBorder {
 	border-style: solid;
 	width: 75%;
-	text-align: justify;
+	text-align: center;
 	margin-left: 12%;
+	padding: 28px;
 }
 .btnAdd {
 	color: white;
