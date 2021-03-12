@@ -9,32 +9,43 @@
 
 <body class="bg-body">
 	<br><br><br>
-	<div class="row">
-		<div class="column-home">
-	    	<img src="./Gallery/L0012.jpg" class="image" style="width: 100%">
-	  	</div>
-	  	<div class="column-home">
-	    	<img src="./Gallery/N0002.jpg" class="image" style="width: 100%">
-	  	</div>
-	  	<div class="column-home">
-	    	<img src="./Gallery/L0021.jpg" class="image" style="width: 100%">
-	  	</div>
-	  	<div class="column-home">
-	    	<img src="./Gallery/L0005.jpg" class="image" style="width: 100%">
-	  	</div>
-	</div>
-	<div class="row">
-		<div class="column-home">
-	    	<img src="./Gallery/R0009.jpg" class="image" style="width: 100%">
-	  	</div>
-	  	<div class="column-home">
-	    	<img src="./Gallery/A0003.jpg" class="image" style="width: 100%">
-	  	</div>
-	  	<div class="column-home">
-	    	<img src="./Gallery/V0001.jpg" class="image" style="width: 100%">
-	  	</div>
-	  	<div class="column-home">
-	    	<img src="./Gallery/A0004.jpg" class="image" style="width: 100%">
-	  	</div>
+	<div class="ctcUs">
+			<img src="../Asset/Gallery/z_contactUs.png" class="img">
+			<div class ="col-sm-6" style="text-align:justify; float:right;">
+				<h1>CONTACT US</h1>
+				<br><br><br>
+					<h2>Opening Hours</h2>
+					<br>
+					<h2>Monday - Friday   :    11.00 - 20.00</h2>
+					<h2>Saturday - Sunday :  11.00 - 22.00</h2>
+					<br>
+					<h2>Call Us : +(123)8-443-5555</h2>
+			</div>
 	</div>
 </body>
+
+<style>
+.ctcUs{
+	margin-top:50px; 
+	background-image: url(../Asset/Gallery/z_bg.jpg);
+	background-position: center; 
+	background-repeat: no-repeat;
+  	background-size: cover;
+  	position: relative; 
+	height:70%
+}
+.img{
+	width:30%; 
+	margin:50px;
+}
+h1{
+	color: white;
+	margin-right: 50px;
+	font-size: 62px;
+}
+h2{
+	color: white;
+	margin-right: 50px;
+	font-size: 36px;
+}
+</style>

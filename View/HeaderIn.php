@@ -19,8 +19,8 @@
 			          	<li><a href="Drink.php">Drink</a></li>
 			        </ul>
 	      		</li>
-	      		<li><a href="#">Promotions</a></li>
-	      		<li><a href="ContactUs.php">Contact Us</a></li>
+	      		<li><a href="./Promotions.php">Promotions</a></li>
+	      		<li><a href="./ContactUs.php">Contact Us</a></li>
 	      		<li><button type="button" data-toggle="#myModal" data-target="#myModal" id="cartModal" class="btn btnCart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</button></li>
 	    	</ul>
 	    	<ul class="nav navbar-nav navbar-right">

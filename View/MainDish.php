@@ -168,7 +168,7 @@
 		function fetch_post_data(imgId){
 			console.log(imgId);
 			$.ajax({
-				url: "Fetch.php",
+				url: "../Controller/Fetch.php",
 				method: "POST",
 				data:{imgId:imgId},
 				success:function(data){

@@ -19,8 +19,8 @@
 			          	<li><a href="Drink.php">Drink</a></li>
 			        </ul>
 	      		</li>
-	      		<li><a href="#">Promotions</a></li>
-	      		<li><a href="ContactUs.php">Contact Us</a></li>
+	      		<li><a href="./Promotions.php">Promotions</a></li>
+	      		<li><a href="./ContactUs.php">Contact Us</a></li>
       			<li><a href="LogIn.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
 	    	</ul>
 	    	<ul class="nav navbar-nav navbar-right">

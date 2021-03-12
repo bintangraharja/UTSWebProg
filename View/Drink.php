@@ -17,7 +17,7 @@
 			<?php
 			include('../Include/db_config.php');
 			$i = 0;
-			$query = mysqli_query($db,"SELECT * FROM menu WHERE Kategori = 'Dessert'");
+			$query = mysqli_query($db,"SELECT * FROM menu WHERE Kategori = 'Drinks'");
 			
 			?>
 			<?php
@@ -66,7 +66,7 @@
 		function fetch_post_data(imgId){
 			console.log(imgId);
 			$.ajax({
-				url: "Fetch.php",
+				url: "../Controller/Fetch.php",
 				method: "POST",
 				data:{imgId:imgId},
 				success:function(data){
