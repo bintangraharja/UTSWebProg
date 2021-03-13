@@ -1,9 +1,13 @@
 <?php
+	session_start();
 	if(!isset($_SESSION["user-login"])){
 		include_once('Header.php');
 	}
 	else{
 		include_once("HeaderIn.php");
+	}
+	if(isset($_SESSION['user-login'])){
+		header("Location: ../View/Home.php");
 	}
 
 ?>
@@ -50,8 +54,17 @@
 				<label for="captcha">Please Enter the Captcha Text</label>
 				<img src="../Controller/Captcha.php" alt="CAPTCHA" class=""><i class="fas fa-redo refresh-captcha"></i>
 				<br>
-				<input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
+				<input type="text" id="captcha" name="captcha_challenge">
 			</div>
+			<?php 
+	            if(isset($_GET['pesan'])){
+		    		if($_GET['pesan']=="failcaptcha"){
+						echo "<div class='alert alert-danger' role='alert' style='margin-top:10px; text-align:center;'>
+  								Captcha yang anda masukkan salah!
+					 		 </div>";
+                    }
+				}
+			?>
 			<button type="submit" class="btn btn-block btnReglog">LOG IN</button><br>
 			<div style="text-align: center">
 				<a href="Register.php">Don't have an account? <button type="button" class="btn btnAcc">REGISTER HERE</button></a>

@@ -46,4 +46,7 @@
         }
         echo $output;
     }
+	else{
+		header("Location: ../View/Home.php");
+	}
 ?>
