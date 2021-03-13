@@ -1,7 +1,6 @@
 <?php
     session_start();
     if(isset($_POST['submit'])){
-        session_start();
         include("../Include/db_config.php");
         $IDUser = $_SESSION['iduser'];
         $IDMenu = $_POST['menuID'];
