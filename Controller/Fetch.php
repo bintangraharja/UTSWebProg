@@ -43,4 +43,10 @@
         }
         echo $output;
     }
+<<<<<<< HEAD
+=======
+    else{
+        header("Location: ../View/Home.php");
+    }
+>>>>>>> b619307 (Session)
 ?>

@@ -1,5 +1,11 @@
 <?php
     session_start();
+<<<<<<< HEAD
+=======
+    if(isset($_SESSION['user-login'])){
+        header("Location: ../View/Home.php");
+    }
+>>>>>>> b619307 (Session)
     include('../include/db_config.php');
 
     $fname = $_POST['fname'];
