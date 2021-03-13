@@ -26,7 +26,7 @@ session_start();
 			</div>
 			<hr style="border-color: #781313">
 			<div class="container">
-				<img src="../Asset/Gallery/voucher2.png" style="width:50%; float:right;">
+				<img src="../Asset/Gallery/voucher4.png" style="width:50%; float:right;">
 				<div class ="col-sm-6" style="text-align:justify;">
 					<h1>Beli Babi Panggang Gratis Hakau</h1>
 					<p>Hanya dengan membeli menu Babi Panggang di Lay Restaurant, langsung bisa bawa pulang Hakau secara gratis dengan menggunakan kode voucher MK002</p>
