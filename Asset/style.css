@@ -102,6 +102,11 @@
 	color: white;
 	background-color: #B13AB0;
 }
+.btnRefresh {
+	border-radius: 0;
+	color: white;
+	background-color: #B42722;
+}
 .input-container {
 	display: -ms-flexbox;
 	display: flex;

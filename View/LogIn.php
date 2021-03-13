@@ -22,7 +22,7 @@
 				<i class="fa fa-envelope icon"></i>
 				<input type="email" name="email" id="Email" class="input-field" placeholder="Email" required>
 			</div>
-			<div class="input-container">
+			<div>
 			<?php 
 	            if(isset($_GET['pesan'])){
 		        	if($_GET['pesan']=="failemail"){
@@ -46,14 +46,13 @@
                     }
 				}
 			?>
-			<div class="form-group">
+			<div class="form-group" style="text-align: center;">
 				<label for="captcha">Please Enter the Captcha Text</label>
-				<div class="input-container">
-				<img src="../Controller/Captcha.php" alt="CAPTCHA" class="captcha-image"><a class="btn refresh-captcha"><span class="glyphicon glyphicon-refresh"></span></a>
-				<br>
-				
+				<div class="input-container" style="display: inline-block;">
+					<img src="../Controller/Captcha.php" alt="CAPTCHA" class="captcha-image"><a class="btn btnRefresh refresh-captcha"><span class="glyphicon glyphicon-refresh"></span></a>
+					<br>
 				</div>
-				<input style="width: 30%" type="text" id="captcha" name="captcha_challenge">
+				<input style="width: 30%" type="text" id="captcha" name="captcha_challenge" autocomplete="off">
 			</div>
 			<?php 
 	            if(isset($_GET['pesan'])){

@@ -8,7 +8,7 @@
   $_SESSION['CAPTCHA_CODE'] = $captcha_code;
 
   // Create captcha image
-  $layer = imagecreatetruecolor(168, 37);
+  $layer = imagecreatetruecolor(157, 32);
   $red = rand(0, 255);
   $green = rand(0, 255);
   $blue = rand(0, 255);
