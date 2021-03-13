@@ -21,14 +21,12 @@
         }else{
             header('location: ../View/HomeAdmin.php?pesan=gagal');
         }
-
-
         }else{
             header('location: ../View/HomeAdmin.php?pesan=gagalfoto');
         }
     }
     else{
-        header("Location: ../View/LogIn.php");
+        header("Location: ../View/Home.php");
     }
 
 

@@ -1,8 +1,5 @@
 <?php 
     session_start();
-    if(isset($_SESSION['user-login'])){
-        header("Location: ../View/Home.php");
-    }
     include('../include/db_config.php');
     if($_POST['captcha_challenge'] == $_SESSION['CAPTCHA_CODE']){
         $email = trim($_POST['email']);

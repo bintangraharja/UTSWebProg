@@ -17,10 +17,6 @@
         }
     }
     else{
-        header("Location: ../View/LogIn.php");
+        header("Location: ../View/Home.php");
     }
-
-
-
-
 ?>

@@ -1,10 +1,7 @@
-<?php 
-	 if(!isset($_SESSION)) 
-	 { 
-		 session_start(); 
-	 } 
+<?php
 	include("../Include/Style.php");
 ?>
+
 <header>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 	  	<div class="container-fluid bg-header">
