@@ -1,20 +1,14 @@
 <?php
-<<<<<<< HEAD
-=======
 	session_start();
->>>>>>> b619307 (Session)
 	if(!isset($_SESSION["user-login"])){
 		include_once('Header.php');
 	}
 	else{
 		include_once("HeaderIn.php");
 	}
-<<<<<<< HEAD
-=======
 	if(isset($_SESSION['user-login'])){
 		header("Location: ../View/Home.php");
 	}
->>>>>>> b619307 (Session)
 
 ?>
 

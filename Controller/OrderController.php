@@ -1,11 +1,8 @@
 <?php
     session_start();
-<<<<<<< HEAD
-=======
     if(!isset($_SESSION['user-login'])){
         header("Location: ../View/LogIn.php");
     }
->>>>>>> b619307 (Session)
     if(isset($_POST['submit'])){
         include("../Include/db_config.php");
         $IDUser = $_SESSION['iduser'];
