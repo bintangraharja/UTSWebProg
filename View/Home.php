@@ -35,7 +35,7 @@
 				        <a href="Promotions.php"><img src="../Asset/Gallery/voucher1.png" alt="Chania" width="460" height="345"></a>
 			      	</div>
 			      	<div class="item">
-					  <a href="Promotions.php"><img src="../Asset/Gallery/voucher2.png" alt="Flower" width="460" height="345"></a>
+					  <a href="Promotions.php"><img src="../Asset/Gallery/voucher4.png" alt="Flower" width="460" height="345"></a>
 			      	</div>
 			      	<div class="item">
 					  <a href="Promotions.php"><img src="../Asset/Gallery/voucher3.png" alt="Flower" width="460" height="345"></a>
