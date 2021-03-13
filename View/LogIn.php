@@ -48,7 +48,7 @@
 			?>
 			<div class="input-container">
 				<label for="captcha">Please Enter the Captcha Text</label>
-				<img src="Captcha.php" alt="CAPTCHA" class=""><i class="fas fa-redo refresh-captcha"></i>
+				<img src="../Controller/Captcha.php" alt="CAPTCHA" class=""><i class="fas fa-redo refresh-captcha"></i>
 				<br>
 				<input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
 			</div>
