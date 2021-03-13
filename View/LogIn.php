@@ -22,6 +22,7 @@
 				<i class="fa fa-envelope icon"></i>
 				<input type="email" name="email" id="Email" class="input-field" placeholder="Email" required>
 			</div>
+			<div class="input-container">
 			<?php 
 	            if(isset($_GET['pesan'])){
 		        	if($_GET['pesan']=="failemail"){
@@ -30,7 +31,8 @@
 						 </p>";
                 	}
 				}
-					?>
+			?>
+			</div>
 			<div class="input-container">
 				<i class="fa fa-key icon"></i>
 				<input type="password" name="password" id="Password" class="input-field" placeholder="Password" required>

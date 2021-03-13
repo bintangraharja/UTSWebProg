@@ -86,10 +86,10 @@
 				</div>
 				<div class="modal-footer" >
 					<div style="float:right;text-align:left;">
-						<p>Total    : Rp. <?php echo $total;?></p>
-						<p>Tax      : Rp. <?php echo $total*0.1 ?> </p>
-						<p>Discount : Rp. -</p>
-						<p>Subtotal : Rp. <?php echo $total+($total*0.1)?></p>
+						<p>Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp; Rp. <?php echo $total;?></p>
+						<p>Tax &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp; Rp. <?php echo $total*0.1 ?> </p>
+						<p>Discount &nbsp; : &nbsp;&nbsp; Rp. -</p>
+						<p>Subtotal &nbsp; : &nbsp;&nbsp; Rp. <?php echo $total+($total*0.1)?></p>
 					</div>
 				</div>
 			</div>
