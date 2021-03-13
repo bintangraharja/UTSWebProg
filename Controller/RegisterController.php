@@ -3,7 +3,7 @@
     if(isset($_SESSION['user-login'])){
         header("Location: ../View/Home.php");
     }
-    include('../include/db_config.php');
+    include('../Include/db_config.php');
 
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
@@ -20,5 +20,5 @@
     $stmt->bind_param("ssssss",$fname,$lname,$email,$bday,$gender,$hashpass);
     $stmt->execute();
 
-    header("location: ../View/Login.php");
+    header("location: ../View/LogIn.php");
 ?>

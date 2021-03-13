@@ -1,5 +1,6 @@
 <?php
     session_start();
+    if(isset($_SESSION['user-login'])){
     if($_SESSION['user-login'] == 'admin'){
         include('../Include/db_config.php');
         if(isset($_POST['id'])){
@@ -17,6 +18,9 @@
         }
     }
     else{
+        header("Location: ../View/Home.php");
+    }
+    }else{
         header("Location: ../View/Home.php");
     }
 ?>

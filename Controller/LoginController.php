@@ -1,11 +1,11 @@
 <?php 
     session_start();
-    include('../include/db_config.php');
+    include('../Include/db_config.php');
     if($_POST['captcha_challenge'] == $_SESSION['CAPTCHA_CODE']){
         $email = trim($_POST['email']);
         $password = trim($_POST['password']);
     
-        $login = mysqli_query($db,"Select * From Akun Where email ='$email'");
+        $login = mysqli_query($db,"Select * From akun Where Email ='$email'");
         $cek = mysqli_num_rows($login);
     
         if($cek > 0){

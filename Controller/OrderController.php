@@ -1,5 +1,6 @@
 <?php
     session_start();
+    if(isset($_SESSION['user-login'])){
     if($_SESSION['user-login'] == 'user' && $_SESSION['iduser'] != 0){
         if(isset($_POST['submit'])){
             include("../Include/db_config.php");
@@ -18,6 +19,9 @@
         }
     }
     else{
+        header("Location: ../View/LogIn.php");
+    }
+    }else{
         header("Location: ../View/LogIn.php");
     }
     
