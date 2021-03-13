@@ -52,7 +52,7 @@
 			?>
 			<div class="input-container">
 				<label for="captcha">Please Enter the Captcha Text</label>
-				<img src="Captcha.php" alt="CAPTCHA" class="captcha-image"><a class="refresh-captcha"><span class="glyphicon glyphicon-refresh"></span></a>
+				<img src="../Controller/Captcha.php" alt="CAPTCHA" class="captcha-image"><a class="refresh-captcha"><span class="glyphicon glyphicon-refresh"></span></a>
 				<br>
 				<input type="text" id="captcha" name="captcha_challenge">
 			</div>
@@ -77,6 +77,6 @@
 <script>
 	var refreshButton = document.querySelector(".refresh-captcha");
 	refreshButton.onclick = function() {
-		document.querySelector(".captcha-image").src = 'Captcha.php';
+		document.querySelector(".captcha-image").src = '../Controller/Captcha.php';
 	}
 </script>
