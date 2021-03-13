@@ -81,7 +81,11 @@
 				<div class="modal-body">
 					<div class="form-inline" style="text-align: right;">
 						<label for="vcode">Voucher : </label>
-						<input type="text" name="voucher" id="vcode" class="form-control" placeholder="Enter Promotion Code">
+						<select class="form-control" name="voucher" id="vcode">
+                                <option>MK001</option>
+                                <option>MK002</option>
+                                <option>MK003</option>
+                            </select>
 					</div>
 				</div>
 				<div class="modal-footer" >

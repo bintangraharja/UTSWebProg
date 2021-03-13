@@ -104,13 +104,13 @@
 								<input type="text" name="harga" class="form-control" id="harga" required>
 							</div>
 							<div class="form-group">
-							<label for="kategori">Category :</label>
-                                <select class="form-control" name="kategori" id="kategori">
-                                    <option>Appetizer</option>
-                                    <option>Dessert</option>
-                                    <option>Drinks</option>
-                                    <option>Main Dish</option>
-                                </select>
+								<label for="kategori">Category :</label>
+	                                <select class="form-control" name="kategori" id="kategori">
+	                                    <option>Appetizer</option>
+	                                    <option>Dessert</option>
+	                                    <option>Drinks</option>
+	                                    <option>Main Dish</option>
+	                                </select>
 							</div>
 							<div class="form-group">
 								<label for="deskripsi">Description :</label>

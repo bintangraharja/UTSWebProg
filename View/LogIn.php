@@ -50,11 +50,13 @@
                     }
 				}
 			?>
-			<div class="input-container">
+			<div class="form-group">
 				<label for="captcha">Please Enter the Captcha Text</label>
+				<div class="input-container">
 				<img src="../Controller/Captcha.php" alt="CAPTCHA" class="captcha-image"><a class="refresh-captcha"><span class="glyphicon glyphicon-refresh"></span></a>
 				<br>
 				<input type="text" id="captcha" name="captcha_challenge">
+				</div>
 			</div>
 			<?php 
 	            if(isset($_GET['pesan'])){

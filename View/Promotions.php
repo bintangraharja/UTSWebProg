@@ -28,12 +28,12 @@ session_start();
 			<div class="container">
 				<img src="../Asset/Gallery/voucher4.png" style="width:50%; float:right;">
 				<div class ="col-sm-6" style="text-align:justify;">
-					<h1>Beli Babi Panggang Gratis Hakau</h1>
-					<p>Hanya dengan membeli menu Babi Panggang di Lay Restaurant, langsung bisa bawa pulang Hakau secara gratis dengan menggunakan kode voucher MK002</p>
+					<h1>Special Voucher Discount 10%</h1>
+					<p>Dapatkan potongan harga sebesar 10% untuk semua jenis menu makanan dengan memasukan kode voucher MK002</p>
 					<p>Syarat & Ketentuan : 
 					<br>	- Berlaku sampai tanggal 31 Maret 2021
+					<br>	- Minimal pemesanan Rp 300.000 melalui pemesanan secara online
 					<br>	- Tidak berlaku kelipatan
-					<br>	- Hanya bisa ditukarkan sebanyak satu kali melalui pemesanan secara online
 					<br>	- Berlaku untuk semua jenis pembayaran
 					<br>	- Voucher tidak dapat digabung dengan kode voucher yang lainnya</p>
 				</div>
