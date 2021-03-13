@@ -82,9 +82,9 @@
 					<div class="form-inline" style="text-align: right;">
 						<label for="vcode">Voucher : </label>
 						<select class="form-control" name="voucher" id="vcode">
-                                <option>MK001</option>
-                                <option>MK002</option>
-                                <option>MK003</option>
+                                <option value="MK001">MK001</option>
+                                <option value="MK002">MK002</option>
+                                <option value="MK003">MK003</option>
                             </select>
 					</div>
 				</div>
