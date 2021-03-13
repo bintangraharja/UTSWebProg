@@ -1,14 +1,9 @@
 <?php
 	session_start();
-	if(!isset($_SESSION["user-login"])){
-		include('Header.php');
+	if($_SESSION['user-login'] != 'admin'){
+		header("location: ./Home.php");
 	}
-	else{
-		include("HeaderIn.php");
-		if($_SESSION["user-login"] == 'user'){
-			header("location: ./Home.php");
-		}
-	}
+	include("HeaderIn.php");
 ?>
 <header>
 	<nav class="navbar navbar-inverse navbar-fixed-top">

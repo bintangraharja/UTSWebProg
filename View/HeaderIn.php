@@ -1,8 +1,4 @@
 <?php 
-	 if(!isset($_SESSION)) 
-	 { 
-		 session_start(); 
-	 } 
 	include("../Include/Style.php");
 ?>
 <header>
@@ -62,8 +58,22 @@
 								$result = $db->query($query);
 								$i = 1;
 								$total = 0;
+								$HargaMinuman = 0;
+								$QtyBebek = 0;
+								$HargaBebek = 0;
 								while($row = $result->fetch_assoc()){
 									$totalHarga = $row['Qty']*$row['Harga'];
+									$id = $row['IDMenu'];
+									
+									if($row['NamaMenu'] == 'Bebek Panggang'){
+										$QtyBebek = $row['Qty'];
+										$HargaBebek = $row['Harga'];
+									}
+									if($id[0] == 'S'){
+										if($row['Harga'] > $HargaMinuman){
+											$HargaMinuman = $row['Harga'];
+										}
+									}
 									echo "<tr>";
 										echo "<td>$i</td>";
 										echo "<td><img src='../Controller/ImageView.php?id=".$row['IDMenu']."' width='100px' height='100px'/></td>";
@@ -82,18 +92,19 @@
 					<div class="form-inline" style="text-align: right;">
 						<label for="vcode">Voucher : </label>
 						<select class="form-control" name="voucher" id="vcode">
-                                <option>MK001</option>
-                                <option>MK002</option>
-                                <option>MK003</option>
+								<option value="">No Voucher</option>
+                                <option value="MK001">MK001</option>
+                                <option value="MK002">MK002</option>
+                                <option value="MK003">MK003</option>
                             </select>
 					</div>
 				</div>
 				<div class="modal-footer" >
 					<div style="float:right;text-align:left;">
 						<p>Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp; Rp. <?php echo $total;?></p>
-						<p>Tax &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp; Rp. <?php echo $total*0.1 ?> </p>
-						<p>Discount &nbsp; : &nbsp;&nbsp; Rp. -</p>
-						<p>Subtotal &nbsp; : &nbsp;&nbsp; Rp. <?php echo $total+($total*0.1)?></p>
+						<p>Discount &nbsp; :&nbsp;&nbsp;- Rp. <span id="Diskon">0</span></p>
+						<p>Tax &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp; Rp. <span id="Tax"><?php echo $total*0.1 ?></span></p>
+						<p>Subtotal &nbsp;&nbsp;&nbsp;: &nbsp;&nbsp; Rp. <span id="Total"> <?php echo $total+($total*0.1)?></span></p>
 					</div>
 				</div>
 			</div>
@@ -103,6 +114,46 @@
 
 <script>
 	$(document).ready(function() {
+		$(document).on('change','#vcode',function(){
+			$('#Diskon').text('0');
+			$('#Tax').text(<?php echo $total*0.1;?>);
+			$('#Total').text(<?php echo $total+($total*0.1);?>);
+            voucher_id = $( "#vcode option:selected" ).text();
+			if(voucher_id == 'MK001'){
+				if(<?php echo $QtyBebek;?> != 0){
+					diskon = <?php echo ($HargaBebek*0.2);?>;
+					total = (<?php echo $total;?> - diskon)
+					tax = ((<?php echo $total;?> - diskon)*0.1)
+					harga = ((<?php echo $total;?> - diskon)*0.1 + total);
+					$('#Tax').text(tax);
+					$('#Diskon').text(diskon);
+					$('#Total').text(harga);
+				}
+			}
+			if(voucher_id == 'MK002'){
+				if(<?php echo $total;?> >= 300000){
+					diskon = <?php echo $total*0.1;?>;
+					total = <?php echo $total;?>-diskon;
+					tax = total*0.1;
+					harga = total + tax;
+					$('#Tax').text(tax);
+					$('#Diskon').text(diskon);
+					$('#Total').text(harga);
+				}
+			}
+			if(voucher_id == 'MK003'){
+				if(<?php echo $HargaMinuman;?> != 0 && <?php echo $total;?> >= 250000){
+					diskon = <?php echo $HargaMinuman*0.3;?>;
+					total = <?php echo $total;?>-diskon;
+					tax = total*0.1;
+					harga = total + tax;
+					$('#Tax').text(tax);
+					$('#Diskon').text(diskon);
+					$('#Total').text(harga);
+				}
+			}
+			console.log(voucher_id);
+        });
 		$('#theModal').modal({
 			keyboard: false,
 			show: false,

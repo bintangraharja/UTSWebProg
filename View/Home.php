@@ -1,16 +1,15 @@
 <?php
-	 if(!isset($_SESSION)) 
-	 { 
-		 session_start(); 
-	 } 
+	session_start();
+	if(isset($_SESSION['user-login'])){
+		if($_SESSION['user-login'] == 'admin'){
+			header("Location: ./HomeAdmin.php");
+		}
+	}
 	if(!isset($_SESSION["user-login"])){
 		include('Header.php');
 	}
 	else{
 		include("HeaderIn.php");
-		if($_SESSION["user-login"] == 'admin'){
-			header("location: ./HomeAdmin.php");
-		}
 	}
 ?>
 

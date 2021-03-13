@@ -1,15 +1,11 @@
 <?php
 	session_start();
+	include_once('Header.php');
 	if(!isset($_SESSION["user-login"])){
-		include_once('Header.php');
 	}
 	else{
-		include_once("HeaderIn.php");
+		header("Location: ./Home.php");
 	}
-	if(isset($_SESSION['user-login'])){
-		header("Location: ../View/Home.php");
-	}
-
 ?>
 
 <!DOCTYPE html>
@@ -53,10 +49,11 @@
 			<div class="form-group">
 				<label for="captcha">Please Enter the Captcha Text</label>
 				<div class="input-container">
-				<img src="../Controller/Captcha.php" alt="CAPTCHA" class="captcha-image"><a class="refresh-captcha"><span class="glyphicon glyphicon-refresh"></span></a>
+				<img src="../Controller/Captcha.php" alt="CAPTCHA" class="captcha-image"><a class="btn refresh-captcha"><span class="glyphicon glyphicon-refresh"></span></a>
 				<br>
-				<input type="text" id="captcha" name="captcha_challenge">
+				
 				</div>
+				<input style="width: 30%" type="text" id="captcha" name="captcha_challenge">
 			</div>
 			<?php 
 	            if(isset($_GET['pesan'])){

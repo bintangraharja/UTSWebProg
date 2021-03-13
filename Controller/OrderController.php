@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if($_SESSION['user-login'] == 'user'){
+    if($_SESSION['user-login'] == 'user' && $_SESSION['iduser'] != 0){
         if(isset($_POST['submit'])){
             include("../Include/db_config.php");
             $IDUser = $_SESSION['iduser'];
