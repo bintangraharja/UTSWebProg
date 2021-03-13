@@ -1,5 +1,6 @@
 <?php
   session_start();
+  
 
   // Generate captcha code
   $random_num    = md5(random_bytes(64));
