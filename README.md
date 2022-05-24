@@ -5,7 +5,7 @@ Kelompok:
 3. Ferry Lay
 4. Maureen Zerlina
 
-link  : https://pinchbeck-quarterde.000webhostapp.com/
+link  : http://layrestaurant.000webhostapp.com/
 akun  :
 - Email: admin@test.id , pass: admin
 - Email: user@test.id , pass: user
